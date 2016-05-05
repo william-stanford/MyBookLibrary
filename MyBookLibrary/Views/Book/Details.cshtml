@@ -1,0 +1,45 @@
+﻿@model MyBookLibrary.Models.Book
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<!-- BOOK DETAILS PAGE -->
+
+<h2>@Html.DisplayFor(model => model.Title)</h2>
+
+<div>
+
+    <hr />
+    <dl class="dl-horizontal">
+        
+        <dt>            
+            Author: 
+        </dt>
+        
+        <dd>
+            @Html.DisplayFor(model => model.Author.firstName) @Html.DisplayFor(model => model.Author.lastName)
+        </dd>
+        
+        <dt>            
+            Publisher: 
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Publisher.Name)
+        </dd>
+                
+        <dt>            
+            Format: 
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Format)
+        </dd>
+        
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.BookID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

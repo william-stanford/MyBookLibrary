@@ -1,0 +1,50 @@
+﻿@model MyBookLibrary.Models.Publisher
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<!-- PUBLISHER DETAILS PAGE -->
+
+<h2>@Html.DisplayFor(model => model.Name)</h2>
+
+<div>
+
+    <hr />
+    <dl class="dl-horizontal">
+        
+<!-- Added this part to make the Details page useful -->
+ 
+        
+        <dd>
+            <table class="table">
+                <tr>                    
+                    <th>Author</th>
+                    <th>Book</th>
+                </tr>
+                @foreach (var item in Model.Books)
+                {
+                    <tr>
+                        
+                    
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Author.firstName) @Html.DisplayFor(modelItem => item.Author.lastName)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Title)
+                        </td>
+
+
+                    </tr>
+                }
+
+            </table>
+
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.PublisherID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

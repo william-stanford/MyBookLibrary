@@ -1,0 +1,2 @@
+# MyBookLibrary
+This was my final project for The Tech Academy's C# course. I choose to build a web application in Visual Studio 2015 using Entity Framework with a Code First design philosophy. The purpose of this web app is to be a database for my rather substantial library. Each entry lists a novel's name, author, publisher, format (eg. paperback, ebook, etc.). The app includes all the basic CRUD functions one would expect in a database, as well as a search function. To give the app a little more visual appeal, I applied a theme called Spacelab from bootswatch.com.
